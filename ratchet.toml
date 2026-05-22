@@ -1,0 +1,10 @@
+[ratchet]
+name = "ratchetlab-root-template"
+direction = "maximize"
+metric_name = "score"
+agent_cmd = "echo 'Set agent_cmd in a project-specific ratchet.toml'"
+eval_cmd = "echo '{\"score\": 0}'"
+allowed_paths = ["program.md"]
+protected_paths = ["ratchet.py", "ratchet.toml"]
+timeout_seconds = 300
+journal_path = ".ratchet/journal.jsonl"

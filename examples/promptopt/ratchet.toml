@@ -1,0 +1,11 @@
+[ratchet]
+name = "promptopt-template"
+direction = "maximize"
+metric_name = "score"
+agent_cmd = "claude -p 'Read examples/promptopt/program.md. Improve examples/promptopt/system_prompt.md only.'"
+eval_cmd = "{python} examples/promptopt/eval.py"
+allowed_paths = ["system_prompt.md"]
+protected_paths = ["eval.py", "dev_set.jsonl", "holdout_set.jsonl", "program.md", "ratchet.toml"]
+timeout_seconds = 300
+journal_path = "../../.ratchet/promptopt-journal.jsonl"
+workdir = "../.."

@@ -1,0 +1,11 @@
+[ratchet]
+name = "codeperf-demo"
+direction = "maximize"
+metric_name = "score"
+agent_cmd = "{python} examples/codeperf/agent_stub.py"
+eval_cmd = "{python} examples/codeperf/eval.py"
+allowed_paths = ["target.py"]
+protected_paths = ["eval.py", "program.md", "ratchet.toml"]
+timeout_seconds = 60
+journal_path = "../../.ratchet/codeperf-journal.jsonl"
+workdir = "../.."

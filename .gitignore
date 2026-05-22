@@ -1,0 +1,31 @@
+# RatchetLab local/generated artifacts
+.ratchet/
+prompt-exports/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local environments and tool caches
+.venv/
+venv/
+.env
+.env.*
+.cache/
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo

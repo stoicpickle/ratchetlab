@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+      - name: Run offline checks
+        run: |
+          python -m unittest discover
+          ratchet doctor --config examples/codeperf/ratchet.toml
+          ratchet --config examples/codeperf/ratchet.toml --iterations 4 --no-git
+          git checkout -- examples/codeperf/target.py
+          RATCHET_PROMPTOPT_PROVIDER=mock python examples/promptopt/eval.py
+          RATCHET_PROMPTOPT_PROVIDER=mock ratchet --config examples/promptopt/ratchet.toml --iterations 0 --no-git
+          git diff --exit-code

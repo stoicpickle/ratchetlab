@@ -1,0 +1,16 @@
+$ python3 ratchet.py --config examples/codeperf/ratchet.toml --iterations 4 --no-git
+[codeperf-demo] baseline score=1.62742 direction=maximize git=False
+
+[codeperf-demo] iteration 1: agent editing allowed artifact(s)
+[codeperf-demo] kept: candidate=158.066 best=158.066 delta=156.439
+
+[codeperf-demo] iteration 2: agent editing allowed artifact(s)
+[codeperf-demo] kept: candidate=189.516 best=189.516 delta=31.4501
+
+[codeperf-demo] iteration 3: agent editing allowed artifact(s)
+[codeperf-demo] discarded: reason=gate_failed candidate=0.0 best=189.51615583691904
+
+[codeperf-demo] iteration 4: agent editing allowed artifact(s)
+[codeperf-demo] discarded: reason=metric_not_improved candidate=155.80367108627445 best=189.51615583691904
+
+[codeperf-demo] done. best score=189.516. journal=/path/to/repo/.ratchet/codeperf-journal.jsonl. report=/path/to/repo/.ratchet/runs/<run-id>/report.md
