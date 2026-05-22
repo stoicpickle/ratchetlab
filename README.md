@@ -59,7 +59,7 @@ python3 ratchet.py doctor --config examples/codeperf/ratchet.toml
 
 This demo uses a fake `agent_stub.py` that edits a slow Python function. It proves the harness works before you give a real coding agent permission to touch things. Humanity has enough untested automation already.
 
-![RatchetLab terminal demo](assets/ratchetlab-demo.svg)
+![RatchetLab terminal demo](assets/ratchetlab-demo.jpg)
 
 From the repo root, run doctor first:
 
