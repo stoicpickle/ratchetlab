@@ -2,6 +2,8 @@
 
 An eval-locked improvement loop for agents, prompts, code, and workflows.
 
+![RatchetLab support graphic](assets/ratchetlab-support.jpg)
+
 **Status:** v0.1 alpha. Local CLI harness. Not a sandbox for untrusted code.
 
 RatchetLab gives an agent one small editable artifact, protects the evaluator, runs a fixed score, and keeps only measured wins. Everything else is discarded and restored.
